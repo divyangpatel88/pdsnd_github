@@ -56,7 +56,7 @@ def load_data(city, month, day):
      # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
     
-    # convert the Start Time column to datetime
+    # convert the Start Time column values to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
     # extract month and day of week from Start Time to create new columns
@@ -144,11 +144,11 @@ def user_stats(df, city):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # Display counts of user types
+    # Display counts by user types
     user_types = df.groupby(['User Type'])['User Type'].count()
     print(user_types, "\n")
     if city != 'washington':
-        # Display counts of gender
+        # Display counts by gender
         gen = df.groupby(['Gender'])['Gender'].count()
         print(gen)
         # Display earliest, most recent, and most common year of birth
