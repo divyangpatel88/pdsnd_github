@@ -26,8 +26,8 @@ Randomly selected data for the first six months of 2017 are provided for all thr
 
 The _Chicago_ and _New York City_ files also have the following two columns:
 
-* Gender
-* Birth Year
+* Gender (Male/Female)
+* Birth Year (YYYY)
 
 ### Credits
 Richard Kalehoff (Udacity mentor)
